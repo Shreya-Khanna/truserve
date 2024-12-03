@@ -27,6 +27,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop:60,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#E9EED9',
@@ -34,9 +35,9 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#ABBA7C',
     paddingVertical: 120,
-    paddingHorizontal: 100,
+    paddingHorizontal: 65,
     marginVertical: 10,
-    borderRadius: 10,
+    borderRadius: 25,
     alignContent:"center",
     marginBottom:60,
     marginTop:50
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 25,
     alignItems:"center",
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
 
