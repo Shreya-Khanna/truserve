@@ -14,11 +14,6 @@ const FoodDetails = () => {
       </View>
       
       <View style={styles.card}>
-        <Text style={styles.label}>AMOUNT OF FOOD:</Text>
-        <Text style={styles.value}>9 kg</Text>
-      </View>
-      
-      <View style={styles.card}>
         <Text style={styles.label}>PEOPLE IT CAN FEED:</Text>
         <Text style={styles.value}>15 people</Text>
       </View>
