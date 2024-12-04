@@ -13,11 +13,13 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.title}>OLIVE</Text>
 
-      <TextInput style={styles.input} placeholder="Username" />
+      <TextInput style={styles.input} placeholder="Username" 
+      placeholderTextColor="black" />
 
       <TextInput
         style={styles.input}
         placeholder="Password"
+        placeholderTextColor="black"
         secureTextEntry={true}
       />
 
