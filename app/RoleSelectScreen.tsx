@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { router } from 'expo-router';
 
 interface Props {
   navigation: any;
@@ -10,13 +11,13 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Login')}
+        onPress={() => router.push("/AddFoodDetails")}
       >
         <Text style={styles.buttonText}>Food Provider</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('FoodItems')}
+        onPress={() => router.push('/AvailableFoodList')}
       >
         <Text style={styles.buttonText}>Food Receiver</Text>
       </TouchableOpacity>
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#ABBA7C',
-    paddingVertical: 120,
+    paddingVertical: 100,
     paddingHorizontal: 65,
     marginVertical: 10,
     borderRadius: 25,

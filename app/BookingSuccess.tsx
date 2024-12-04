@@ -1,12 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
 
 const SuccessScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Success!</Text>
       <Text style={styles.subtitle}>Food item has been booked successfully</Text>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity onPress={()=>{
+          router.push("/")
+      }} style={styles.button}>
         <Text style={styles.buttonText}>Back to Home</Text>
       </TouchableOpacity>
     </View>
