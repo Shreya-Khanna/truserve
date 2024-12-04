@@ -50,9 +50,12 @@ export default function App() {
     item;
   });
 
-  let handleClick=()=>{
-    router.push("/RequestedFoodDetails")
-    
+  let handleClick=({ item }: { item: FoodItem })=>{
+    router.push({
+      pathname: '/RequestedFoodDetails',
+      params: {name: item.name,location:item.location,quantity:item.quantity },
+    })
+    console.log(item.name)
   }
 
   const renderFoodItem = ({ item }: { item: FoodItem }) => (
@@ -62,7 +65,10 @@ export default function App() {
         <Text style={styles.foodDetails}>Loc: {item.location}</Text>
         <Text style={styles.foodDetails}>Quantity - {item.quantity}</Text>
       </View>
-      <TouchableOpacity onPress={handleClick} style={styles.requestButton}>
+      <TouchableOpacity
+        onPress={() => handleClick({ item })} // Pass the `item` parameter here
+        style={styles.requestButton}
+      >
         <Text style={styles.requestButtonText}>Request</Text>
       </TouchableOpacity>
     </View>
