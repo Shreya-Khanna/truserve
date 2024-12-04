@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import { router } from "expo-router";
 
 const LoginScreen: React.FC = () => {
   const [form, setForm] = useState({
@@ -36,7 +37,10 @@ const LoginScreen: React.FC = () => {
           keyboardType={key === "contactNumber" ? "phone-pad" : "default"}
         />
       ))}
-      <TouchableOpacity style={styles.submitButton}>
+      <TouchableOpacity
+      onPress={()=>{
+        router.push("/RoleSelectScreen")
+      }} style={styles.submitButton}>
         <Text style={styles.submitButtonText}>Submit</Text>
       </TouchableOpacity>
     </View>

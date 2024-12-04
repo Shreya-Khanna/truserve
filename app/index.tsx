@@ -5,8 +5,9 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  Button,
 } from "react-native";
-
+import { router } from "expo-router";
 export default function App() {
   return (
     <View style={styles.container}>
@@ -20,11 +21,21 @@ export default function App() {
         secureTextEntry={true}
       />
 
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity
+        style={styles.loginButton}
+        onPress={() => {
+          router.push("/RoleSelectScreen");
+        }}
+      >
         <Text style={styles.loginButtonText}>Login</Text>
       </TouchableOpacity>
-
-      <Text style={styles.newUserText}>New user</Text>
+      <TouchableOpacity
+        onPress={() => {
+          router.push("/SignUpInfo");
+        }}
+      >
+        <Text style={styles.newUserText}>New User?</Text>
+      </TouchableOpacity>
     </View>
   );
 }

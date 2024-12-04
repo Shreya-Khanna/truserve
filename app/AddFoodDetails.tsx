@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
+import { router } from "expo-router";
 
 const FoodDetailsForm = () => {
   return (
@@ -17,7 +18,9 @@ const FoodDetailsForm = () => {
         <Text style={styles.label}>Location/Address</Text>
         <TextInput style={styles.input} placeholder="Enter location or address" />
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={()=>{
+          router.push("/SubmissionSuccess")
+        }} style={styles.button}>
           <Text style={styles.buttonText}>Submit</Text>
         </TouchableOpacity>
       </View>

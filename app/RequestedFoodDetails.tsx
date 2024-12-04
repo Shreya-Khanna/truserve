@@ -1,10 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { router } from "expo-router";
 
-let FoodItems=["Grilled Chicken with mashed potatoes and green beans","Chocolate brownie"]
-let life=3 
-let people=15
-let location="Industrial Area Phase 6"
+let FoodItems = [
+  "Grilled Chicken with mashed potatoes and green beans",
+  "Chocolate brownie",
+];
+let life = 3;
+let people = 15;
+let location = "Industrial Area Phase 6";
 
 const FoodDetails = ({}) => {
   return (
@@ -13,9 +17,7 @@ const FoodDetails = ({}) => {
 
       <View style={styles.card}>
         <Text style={styles.label}>FOOD MENU:</Text>
-        <Text style={styles.value}>
-         {FoodItems.join("\n")}
-        </Text>
+        <Text style={styles.value}>{FoodItems.join("\n")}</Text>
       </View>
 
       <View style={styles.card}>
@@ -33,7 +35,9 @@ const FoodDetails = ({}) => {
         <Text style={styles.value}>{location}</Text>
       </View>
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity onPress={()=>{
+        router.push("/BookingSuccess")
+      }} style={styles.button}>
         <Text style={styles.buttonText}>Confirm Booking</Text>
       </TouchableOpacity>
     </View>

@@ -26,12 +26,22 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
+  let tabs=["index","AvailableFoodList"]
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen options={{headerShown:false}} name="index" />
+        <Stack.Screen options={{headerShown:false}} name="AvailableFoodList" />
+        <Stack.Screen options={{headerShown:false}} name="RequestedFoodDetails" />
+        <Stack.Screen options={{headerShown:false}} name="SignUpInfo" />
+        <Stack.Screen options={{headerShown:false}} name="SubmissionSuccess" />
+        <Stack.Screen options={{headerShown:false}} name="RoleSelectScreen" />
+        <Stack.Screen options={{headerShown:false}} name="BookingSuccess" />
+        <Stack.Screen options={{headerShown:false}} name="AddFoodDetails" />
+
+
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

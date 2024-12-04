@@ -11,7 +11,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 const PremiumSubscription = () => {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("");
 
-  const handlePaymentSelection = (method:any) => {
+  const handlePaymentSelection = (method: any) => {
     setSelectedPaymentMethod(method);
   };
 
@@ -94,9 +94,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000  ",
     textAlign: "center",
-    marginTop:50,
+    marginTop: 50,
     marginBottom: 20,
-  },
+  },      
   card: {
     backgroundColor: "#fff",
     borderRadius: 10,
