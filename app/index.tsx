@@ -5,9 +5,9 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  Button,
 } from "react-native";
 import { router } from "expo-router";
+
 export default function App() {
   return (
     <View style={styles.container}>

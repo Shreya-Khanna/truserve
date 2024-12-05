@@ -5,6 +5,12 @@ import { router } from "expo-router";
 const FoodDetailsForm = () => {
   return (
     <View style={styles.container}>
+      {/* Back Button */}
+      <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+        <Text style={styles.backButtonIcon}>←</Text>
+        <Text style={styles.backButtonText}>Go Back</Text>
+      </TouchableOpacity>
+
       <Text style={styles.header}>Food Details</Text>
       <View style={styles.form}>
         <Text style={styles.label}>Food Description</Text>
@@ -18,9 +24,12 @@ const FoodDetailsForm = () => {
         <Text style={styles.label}>Location/Address</Text>
         <TextInput style={styles.input} placeholder="Enter location or address" />
 
-        <TouchableOpacity onPress={()=>{
-          router.push("/SubmissionSuccess")
-        }} style={styles.button}>
+        <TouchableOpacity
+          onPress={() => {
+            router.push("/SubmissionSuccess");
+          }}
+          style={styles.button}
+        >
           <Text style={styles.buttonText}>Submit</Text>
         </TouchableOpacity>
       </View>
@@ -34,13 +43,34 @@ const styles = StyleSheet.create({
     backgroundColor: "#E9EED9",
     padding: 20,
   },
+  backButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#c8d8a3", // Green background
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    borderRadius: 100,
+    alignSelf: "flex-start",
+    marginBottom: 20,
+    marginTop: 50
+  },
+  backButtonIcon: {
+    fontSize: 18,
+    color: "#000",
+    marginRight: 10, // Space between icon and text
+  },
+  backButtonText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#000",
+  },
   header: {
     fontSize: 30,
     fontWeight: "bold",
     color: "#000",
     textAlign: "center",
     marginBottom: 70,
-    marginTop:50
+    marginTop: 50,
   },
   form: {
     backgroundColor: "#ABBA7C",
