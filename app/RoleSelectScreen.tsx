@@ -11,7 +11,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => router.push("/AddFoodDetails")}
+        onPress={() => router.push("/HomeScreenProvider")}
       >
         <Text style={styles.buttonText}>Food Provider</Text>
       </TouchableOpacity>
