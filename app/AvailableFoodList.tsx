@@ -60,6 +60,7 @@ export default function App() {
 
   const renderFoodItem = ({ item }: { item: FoodItem }) => (
     <View style={styles.foodCard}>
+      
       <View style={styles.foodInfo}>
         <Text style={styles.foodName}>{item.name}</Text>
         <Text style={styles.foodDetails}>Loc: {item.location}</Text>
@@ -76,6 +77,11 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      {/* Back Button */}
+      <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+        <Text style={styles.backButtonIcon}>←</Text>
+        <Text style={styles.backButtonText}>Go Back</Text>
+      </TouchableOpacity>
       <Text style={styles.heading}>Available Food Items</Text>
       <FlatList
         data={foodItems}
@@ -98,6 +104,28 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 20,
   },
+  backButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#c8d8a3", // Green background
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    borderRadius: 100,
+    alignSelf: "flex-start",
+    marginBottom: 20,
+    marginTop: 40,
+    marginLeft: 10
+  },
+  backButtonIcon: {
+    fontSize: 18,
+    color: "#000",
+    marginRight: 10, // Space between icon and text
+  },
+  backButtonText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#000",
+  },
   addFoodIcon: {
     color: "#FFF",
     fontSize: 24,
@@ -110,7 +138,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000",
     marginBottom: 50,
-    marginTop: 70,
+    marginTop: 30,
   },
   foodList: { paddingBottom: 20 },
   foodCard: {

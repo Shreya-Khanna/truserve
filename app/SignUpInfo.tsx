@@ -30,6 +30,7 @@ const LoginScreen: React.FC = () => {
         <TextInput
           key={key}
           placeholder={key.replace(/([A-Z])/g, " $1")}
+          placeholderTextColor="black"
           value={form[key as keyof typeof form]}
           onChangeText={(value) => handleInputChange(key, value)}
           style={styles.input}

@@ -8,6 +8,11 @@ const FoodDetails = () => {
   console.log(FoodItems, life, people, location)
   return (
     <View style={styles.container}>
+      {/* Back Button */}
+      <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+        <Text style={styles.backButtonIcon}>←</Text>
+        <Text style={styles.backButtonText}>Go Back</Text>
+      </TouchableOpacity>
       <Text style={styles.header}>Food Details</Text>
 
       <View style={styles.card}>
@@ -67,6 +72,27 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000000",
     marginBottom: 5,
+  },
+  backButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#c8d8a3", // Green background
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    borderRadius: 100,
+    alignSelf: "flex-start",
+    marginBottom: 20,
+    marginTop: 10
+  },
+  backButtonIcon: {
+    fontSize: 18,
+    color: "#000",
+    marginRight: 10, // Space between icon and text
+  },
+  backButtonText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#000",
   },
   value: {
     fontSize: 16,
