@@ -40,6 +40,7 @@ export default function RootLayout() {
         <Stack.Screen options={{headerShown:false}} name="RoleSelectScreen" />
         <Stack.Screen options={{headerShown:false}} name="BookingSuccess" />
         <Stack.Screen options={{headerShown:false}} name="AddFoodDetails" />
+        <Stack.Screen options={{headerShown:false}} name="HomeScreenProvider" />
 
 
       </Stack>
