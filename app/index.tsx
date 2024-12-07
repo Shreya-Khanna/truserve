@@ -1,20 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   StyleSheet,
   Text,
   View,
   TextInput,
-  TouchableOpacity,
+  TouchableOpacity
 } from "react-native";
 import { router } from "expo-router";
 
 export default function App() {
+  const [username, setUsername] = useState("");
+  
+  const handleLogin = () => {
+    if (username === "rajesh.kumar") {
+      router.push("/AvailableFoodList");
+    } else if (username === "shweta.singh") {
+      router.push("/AddFoodDetails");
+    }
+  };
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>OLIVE</Text>
-
-      <TextInput style={styles.input} placeholder="Username" 
-      placeholderTextColor="black" />
+         
+      <TextInput 
+      style={styles.input} 
+      placeholder="Username" 
+      placeholderTextColor="black" 
+      value={username}
+      onChangeText={(text) => setUsername(text)}
+      />
 
       <TextInput
         style={styles.input}
@@ -25,18 +40,17 @@ export default function App() {
 
       <TouchableOpacity
         style={styles.loginButton}
-        onPress={() => {
-          router.push("/RoleSelectScreen");
-        }}
+        onPress={handleLogin}
       >
         <Text style={styles.loginButtonText}>Login</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          router.push("/SignUpInfo");
+          router.push("/NewRoleSelectScreen");
         }}
       >
-        <Text style={styles.newUserText}>New User?</Text>
+        <Text style={styles.newUserText}>New user? 
+          Sign up here.</Text>
       </TouchableOpacity>
     </View>
   );
@@ -80,6 +94,7 @@ const styles = StyleSheet.create({
   },
   newUserText: {
     color: "blue",
+    fontSize: 18,
     marginTop: 20,
     textDecorationLine: "underline",
   },
