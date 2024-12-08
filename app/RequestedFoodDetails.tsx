@@ -2,10 +2,11 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useLocalSearchParams, router } from "expo-router";
 
+console.log(useLocalSearchParams());
+
 const FoodDetails = () => {
   // Get the parameters passed through router.push
-  const { FoodItems, life, people, location } = useLocalSearchParams();
-  console.log(FoodItems, life, people, location)
+  const { place, location, quantity,menu,life } = useLocalSearchParams();
   return (
     <View style={styles.container}>
       {/* Back Button */}
@@ -16,18 +17,23 @@ const FoodDetails = () => {
       <Text style={styles.header}>Food Details</Text>
 
       <View style={styles.card}>
+        <Text style={styles.label}>Place:</Text>
+        <Text style={styles.value}>{place}</Text>
+      </View>
+
+      <View style={styles.card}>
         <Text style={styles.label}>FOOD MENU:</Text>
-        <Text style={styles.value}>{FoodItems}</Text>
+        <Text style={styles.value}>{menu}</Text>
       </View>
 
       <View style={styles.card}>
         <Text style={styles.label}>PEOPLE IT CAN FEED:</Text>
-        <Text style={styles.value}>{people} people</Text>
+        <Text style={styles.value}>{quantity}</Text>
       </View>
 
       <View style={styles.card}>
         <Text style={styles.label}>SHELF LIFE:</Text>
-        <Text style={styles.value}>{life} hours</Text>
+        <Text style={styles.value}>{life}</Text>
       </View>
 
       <View style={styles.card}>

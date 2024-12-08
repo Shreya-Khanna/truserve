@@ -17,13 +17,13 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => router.push("/HomeScreenProvider")}
+        onPress={() => router.push("/")}
       >
         <Text style={styles.buttonText}>Food Provider</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => router.push('/AvailableFoodList')}
+        onPress={() => router.push('/')}
       >
         <Text style={styles.buttonText}>Food Receiver</Text>
       </TouchableOpacity>

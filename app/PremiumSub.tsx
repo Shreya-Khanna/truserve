@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   selectedOption: {
     borderWidth: 2,
-    borderColor: "#B71C1C",
+    borderColor: "#0a0",
   },
 });
 

@@ -12,6 +12,11 @@ const SuccessScreen = () => {
       }} style={styles.button}>
         <Text style={styles.buttonText}>Back to Home</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+      onPress={()=>{router.push("/PremiumSub")}}
+      style={styles.button}>
+        <Text style={styles.buttonText}>Join Premium</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -37,10 +42,12 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   button: {
+    
     backgroundColor: '#212121', // Black button
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 10,
+    marginTop:50,
     alignItems: 'center',
   },
   buttonText: {

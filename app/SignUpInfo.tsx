@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#E9EED9",
-    padding: 70,
+    padding: 15,
   },
   header: {
     textAlign: "center",

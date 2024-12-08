@@ -13,6 +13,8 @@ type FoodItem = {
   name: string;
   location: string;
   quantity: string;
+  menu:string;
+  life:string
 };
 
 
@@ -25,24 +27,32 @@ export default function App() {
       name: "Johnson Caterers",
       location: "Phase 6",
       quantity: "15 person",
+      menu:"Chole bhature, pickles, yogurt, and a sweet lassi",
+      life:"7 hours"
     },
     {
       id: "2",
       name: "Cuisines Experts",
       location: "Phase 7",
       quantity: "12 person",
+      menu:"Aloo paratha with curd, salad, and a masala chai",
+      life:"6 hours",
     },
     {
       id: "3",
       name: "Masala Zing",
       location: "Phase 9",
       quantity: "27 person",
+      menu:"Pulao with vegetable curry, papad,raita",
+      life:"8 hours",
     },
     {
       id: "4",
       name: "Bittu Deluxe Dhaba",
       location: "Phase 7",
       quantity: "15 person",
+      menu:"Tawa chicken with roti, dal tadka,gajar ka halwa",
+      life:"10 hours"
     },
   ];
 
@@ -53,7 +63,7 @@ export default function App() {
   let handleClick=({ item }: { item: FoodItem })=>{
     router.push({
       pathname: '/RequestedFoodDetails',
-      params: {name: item.name,location:item.location,quantity:item.quantity },
+      params: {place: item.name,location:item.location,quantity:item.quantity,menu:item.menu,life:item.life},
     })
     console.log(item.name)
   }
@@ -64,13 +74,13 @@ export default function App() {
       <View style={styles.foodInfo}>
         <Text style={styles.foodName}>{item.name}</Text>
         <Text style={styles.foodDetails}>Loc: {item.location}</Text>
-        <Text style={styles.foodDetails}>Quantity - {item.quantity}</Text>
+        <Text style={styles.foodDetails}>Quantity For -{item.quantity}</Text>
       </View>
       <TouchableOpacity
         onPress={() => handleClick({ item })} // Pass the `item` parameter here
         style={styles.requestButton}
       >
-        <Text style={styles.requestButtonText}>Request</Text>
+        <Text style={styles.requestButtonText}> Show </Text>
       </TouchableOpacity>
     </View>
   );
