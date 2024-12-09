@@ -4,7 +4,8 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  Image
 } from "react-native";
 import { router } from "expo-router";
 
@@ -21,7 +22,14 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>OLIVE</Text>
+      <Image
+        source={require("../assets/images/Cleaned_Logo.png")}
+        style={{
+          width: 250,
+          height: 250,
+          top: -20
+        }} 
+      />
          
       <TextInput 
       style={styles.input} 
@@ -53,6 +61,7 @@ export default function App() {
           Sign up here.</Text>
       </TouchableOpacity>
     </View>
+    
   );
 }
 
