@@ -26,32 +26,32 @@ export default function App() {
       id: "1",
       name: "Johnson Caterers",
       location: "Phase 6",
-      quantity: "15 person",
-      menu:"Chole bhature, pickles, yogurt, and a sweet lassi",
+      quantity: "15 people",
+      menu:"Chole, bhature, pickles, yogurt, and sweet lassi",
       life:"7 hours"
     },
     {
       id: "2",
       name: "Cuisines Experts",
       location: "Phase 7",
-      quantity: "12 person",
-      menu:"Aloo paratha with curd, salad, and a masala chai",
+      quantity: "12 people",
+      menu:"Aloo paratha with curd, salad, and masala chai",
       life:"6 hours",
     },
     {
       id: "3",
       name: "Masala Zing",
       location: "Phase 9",
-      quantity: "27 person",
-      menu:"Pulao with vegetable curry, papad,raita",
+      quantity: "27 people",
+      menu:"Pulao with vegetable curry, papad, raita",
       life:"8 hours",
     },
     {
       id: "4",
       name: "Bittu Deluxe Dhaba",
       location: "Phase 7",
-      quantity: "15 person",
-      menu:"Tawa chicken with roti, dal tadka,gajar ka halwa",
+      quantity: "15 people",
+      menu:"Tawa chicken with roti, dal tadka, gajar ka halwa",
       life:"10 hours"
     },
   ];
@@ -74,7 +74,7 @@ export default function App() {
       <View style={styles.foodInfo}>
         <Text style={styles.foodName}>{item.name}</Text>
         <Text style={styles.foodDetails}>Loc: {item.location}</Text>
-        <Text style={styles.foodDetails}>Quantity For -{item.quantity}</Text>
+        <Text style={styles.foodDetails}>Quantity for: {item.quantity}</Text>
       </View>
       <TouchableOpacity
         onPress={() => handleClick({ item })} // Pass the `item` parameter here
@@ -92,7 +92,8 @@ export default function App() {
         <Text style={styles.backButtonIcon}>←</Text>
         <Text style={styles.backButtonText}>Go Back</Text>
       </TouchableOpacity>
-      <Text style={styles.heading}>Available Food Items</Text>
+      <Text style={styles.heading}>Available Food Items
+      </Text>
       <FlatList
         data={foodItems}
         keyExtractor={(item) => item.id}
@@ -135,6 +136,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     color: "#000",
+  },
+  heading: {
+    textAlign: "center",
   },
   addFoodIcon: {
     color: "#FFF",
