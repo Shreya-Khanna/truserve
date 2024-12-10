@@ -45,7 +45,7 @@ const LoginScreen: React.FC = () => {
       ))}
       <TouchableOpacity
       onPress={()=>{
-        router.push("/RoleSelectScreen")
+        router.push('/')
       }} style={styles.submitButton}>
         <Text style={styles.submitButtonText}>Submit</Text>
       </TouchableOpacity>

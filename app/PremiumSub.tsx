@@ -21,7 +21,7 @@ const PremiumSubscription = () => {
 
       {/* Premium Benefits */}
       <View style={styles.card}>
-        <Text style={styles.cardTitle}>Premium Benefits</Text>
+        <Text style={styles.cardTitle}>Benefits</Text>
         <View style={styles.benefitRow}>
           <MaterialIcons name="check-circle" size={20} color="green" />
           <Text style={styles.benefitText}>
@@ -30,19 +30,20 @@ const PremiumSubscription = () => {
         </View>
         <View style={styles.benefitRow}>
           <MaterialIcons name="check-circle" size={20} color="green" />
-          <Text style={styles.benefitText}>Delivery offered</Text>
+          <Text style={styles.benefitText}>Food delivery offered</Text>
         </View>
         <View style={styles.benefitRow}>
           <MaterialIcons name="check-circle" size={20} color="green" />
-          <Text style={styles.benefitText}>24/7 Customer support</Text>
+          <Text style={styles.benefitText}>24/7 customer support</Text>
         </View>
       </View>
 
       {/* Payment Details */}
       <View style={styles.card}>
-        <Text style={styles.cardTitle}>Payment Details</Text>
+        <Text style={styles.cardTitle}>Payment details</Text>
         <Text style={styles.price}>₹199/month</Text>
-        <Text style={styles.paymentMethodLabel}>Select Payment Method</Text>
+        <Text style={styles.price}></Text>
+        <Text style={styles.paymentMethodLabel}>Select payment method: </Text>
 
         {/* Payment Methods */}
         <TouchableOpacity
