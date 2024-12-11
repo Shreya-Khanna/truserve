@@ -7,6 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { router } from "expo-router";
 
 const PremiumSubscription = () => {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("");
@@ -79,7 +80,7 @@ const PremiumSubscription = () => {
           <Text style={styles.paymentText}>Net Banking</Text>
         </TouchableOpacity>
       <View style={styles.button}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push("/")}>
         <Text style={styles.ConfirmText}>Confirm Payment</Text>
         </TouchableOpacity>
       </View>
