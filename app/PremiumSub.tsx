@@ -164,7 +164,8 @@ const styles = StyleSheet.create({
   },
   ConfirmText: {
     fontSize: 20,
-    textAlign: "center"
+    textAlign: "center",
+    fontWeight: "bold"
   }
 });
 
