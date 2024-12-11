@@ -78,6 +78,12 @@ const PremiumSubscription = () => {
           <MaterialIcons name="payment" size={20} color="#000" />
           <Text style={styles.paymentText}>Net Banking</Text>
         </TouchableOpacity>
+      <View style={styles.button}>
+        <TouchableOpacity>
+        <Text style={styles.ConfirmText}>Confirm Payment</Text>
+        </TouchableOpacity>
+      </View>
+
       </View>
     </ScrollView>
   );
@@ -149,6 +155,16 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#0a0",
   },
+  button: {
+    backgroundColor: "#c8d8a3",
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 10
+  },
+  ConfirmText: {
+    fontSize: 20,
+    textAlign: "center"
+  }
 });
 
 export default PremiumSubscription;
