@@ -9,13 +9,16 @@ const SuccessScreen = () => {
       <Text style={styles.subtitle}>Food item has been booked successfully</Text>
       <TouchableOpacity onPress={()=>{
           router.push("/")
-      }} style={styles.button}>
+      }} style={styles.button1}>
         <Text style={styles.buttonText}>Back to Home</Text>
       </TouchableOpacity>
+      <Text style={styles.subtitle}> </Text>
+      <Text style={styles.subtitle}> </Text>
+      <Text style={styles.subtitle}>Want notifications the next time food is available? </Text>
       <TouchableOpacity
       onPress={()=>{router.push("/PremiumSub")}}
-      style={styles.button}>
-        <Text style={styles.buttonText}>Join Premium</Text>
+      style={styles.button2}>
+        <Text style={styles.buttonText}>Get Premium!</Text>
       </TouchableOpacity>
     </View>
   );
@@ -30,30 +33,38 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    fontSize: 32,
+    fontSize: 36,
+    padding: 20,
     fontWeight: 'bold',
     color: '#000', // White text
     marginBottom: 10,
+    marginTop: 40,
+    marginStart: 20
   },
   subtitle: {
-    fontSize: 16,
+    fontSize: 20,
     color: '#000',
     textAlign: 'center',
-    marginBottom: 30,
+    marginBottom: 10,
   },
-  button: {
-    
-    backgroundColor: '#212121', // Black button
+  button1: {
+    backgroundColor: '#c8d8a3', // Black button
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 10,
-    marginTop:50,
+    alignItems: 'center',
+  },
+  button2: {
+    backgroundColor: '#c8d8a3', // Black button
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 10,
     alignItems: 'center',
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: '#FFFFFF', // White text
+    color: '#212121', // White text
   },
 });
 

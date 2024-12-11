@@ -139,6 +139,9 @@ const styles = StyleSheet.create({
   },
   heading: {
     textAlign: "center",
+    fontSize: 30,
+    marginTop: 10,
+    marginBottom: 40
   },
   addFoodIcon: {
     color: "#FFF",
@@ -147,8 +150,8 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   addFoodText: { color: "#FFF", fontSize: 18, fontWeight: "bold" },
-  heading: {
-    fontSize: 30,
+  title: {
+    fontSize: 90,
     fontWeight: "bold",
     color: "#000",
     marginBottom: 50,

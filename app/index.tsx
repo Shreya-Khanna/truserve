@@ -17,6 +17,8 @@ export default function App() {
       router.push("/AvailableFoodList");
     } else if (username === "shweta.singh") {
       router.push("/AddFoodDetails");
+    } else if (username === "vikas.bansal") {
+      router.push("/PremiumPage");
     }
   };
   
