@@ -1,12 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { useLocalSearchParams, router } from "expo-router";
+import { router } from "expo-router";
 
-console.log(useLocalSearchParams());
 
 const FoodDetails = () => {
   // Get the parameters passed through router.push
-  const { place, quantity,menu,life } = useLocalSearchParams();
   return (
     <View style={styles.container}>
       {/* Back Button */}
@@ -18,22 +16,22 @@ const FoodDetails = () => {
 
       <View style={styles.card}>
         <Text style={styles.label}>Place:</Text>
-        <Text style={styles.value}>{place}</Text>
+        <Text style={styles.value}>Sector 82</Text>
       </View>
 
       <View style={styles.card}>
         <Text style={styles.label}>FOOD MENU:</Text>
-        <Text style={styles.value}>{menu}</Text>
+        <Text style={styles.value}>Farmhouse pizza and garlic bread</Text>
       </View>
 
       <View style={styles.card}>
         <Text style={styles.label}>PEOPLE IT CAN FEED:</Text>
-        <Text style={styles.value}>{quantity}</Text>
+        <Text style={styles.value}>15</Text>
       </View>
 
       <View style={styles.card}>
         <Text style={styles.label}>SHELF LIFE:</Text>
-        <Text style={styles.value}>{life}</Text>
+        <Text style={styles.value}>8 hours</Text>
       </View>
       <TouchableOpacity
         onPress={() => {
