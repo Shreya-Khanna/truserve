@@ -35,12 +35,16 @@ export default function RootLayout() {
         <Stack.Screen options={{headerShown:false}} name="index" />
         <Stack.Screen options={{headerShown:false}} name="AvailableFoodList" />
         <Stack.Screen options={{headerShown:false}} name="RequestedFoodDetails" />
+        <Stack.Screen options={{headerShown:false}} name="ReqFoodDetails" />
         <Stack.Screen options={{headerShown:false}} name="SignUpInfo" />
         <Stack.Screen options={{headerShown:false}} name="SubmissionSuccess" />
-        <Stack.Screen options={{headerShown:false}} name="RoleSelectScreen" />
+        <Stack.Screen options={{headerShown:false}} name="PremiumPage" />
+        <Stack.Screen options={{headerShown:false}} name="NewRoleSelectScreen" />
         <Stack.Screen options={{headerShown:false}} name="BookingSuccess" />
         <Stack.Screen options={{headerShown:false}} name="AddFoodDetails" />
+        <Stack.Screen options={{headerShown:false}} name="PremBookingSuccess" />
         <Stack.Screen options={{headerShown:false}} name="HomeScreenProvider" />
+        <Stack.Screen options={{headerShown:false}} name="Map" />
         <Stack.Screen options={{headerShown:false}} name="PremiumSub" />
 
 

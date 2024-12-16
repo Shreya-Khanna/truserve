@@ -1,49 +1,40 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { router } from 'expo-router';
+import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
+import { router } from "expo-router";
 
-const PremiumPage = () => {
-
-  const data = [
-    { id: '1', serves: '15p', time: '2 min ago', caterer: 'Johnson Caterers' },
-    { id: '2', serves: '12p', time: '17 min ago', caterer: 'Cuisines Experts' },
-    { id: '3', serves: '27p', time: '36 min ago', caterer: 'Masala Zing' },
-    { id: '4', serves: '15p', time: '42 min ago', caterer: 'Bittu Deluxe Dhaba' },
+const Premium = ({ navigation }) => {
+  const foodUpdates = [
+    { id: '1', name: 'Johnson Caterers', serves: '15p', time: '2 min ago' },
+    { id: '2', name: 'Cuisines Experts', serves: '12p', time: '17 min ago' },
+    { id: '3', name: 'Masala Zing', serves: '27p', time: '36 min ago' },
+    { id: '4', name: 'Bittu Deluxe Dhaba', serves: '15p', time: '42 min ago' },
   ];
 
-  const handlePress = (caterer) => {
-    console.log(`Selected: ${caterer}`);
-  }
-
-  const renderItem = ({ item }) => (
-    
-    <View style={styles.itemContainer}>
-      <View style={styles.infoContainer}>
-        <Text style={styles.serves}>{`serves ${item.serves}`}</Text>
-        <Text style={styles.time}>{item.time}</Text>
-      </View>
-      <Text style={styles.caterer}>{item.caterer}</Text>
-    </View>
+  const renderCard = ({ item }) => (
+    <TouchableOpacity
+      style={styles.card}
+      onPress={()=>{
+        router.push("/ReqFoodDetails")
+    }}>
+      <Text style={styles.serves}>{`serves ${item.serves}`}</Text>
+      <Text style={styles.time}>{item.time}</Text>
+      <Text style={styles.name}>{item.name}</Text>
+    </TouchableOpacity>
   );
 
   return (
     <View style={styles.container}>
-      <Image source={require('./assets/bell-icon.png')} style={styles.icon} />
-      <Text style={styles.headerText}>This page is live.</Text>
-      <Text style={styles.subHeaderText}>
-        Updates for surplus food will be shown as they are shared.
+      <Text style={styles.header}>
+        This page is live. Updates for surplus food will be shown as they are
+        shared.
       </Text>
-
       <FlatList
-        data={data}
-        renderItem={renderItem}
+        data={foodUpdates}
+        renderItem={renderCard}
         keyExtractor={(item) => item.id}
-        contentContainerStyle={styles.listContainer}
       />
-
-      <TouchableOpacity style={styles.footerContainer}>
-        <Image source={require('./assets/phone-icon.png')} style={styles.phoneIcon} />
-        <Text style={styles.footerText}>Customer Service</Text>
+      <TouchableOpacity style={styles.customerService}>
+        <Text style={styles.customerServiceText}>📞 Customer Service</Text>
       </TouchableOpacity>
     </View>
   );
@@ -52,87 +43,49 @@ const PremiumPage = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#d5e8ba',
-    alignItems: 'center',
-    paddingTop: 50,
+    backgroundColor: '#D8EAD3',
+    padding: 20,
+    marginTop: 100,
+    marginBottom: 50
   },
-  icon: {
-    width: 40,
-    height: 40,
-    marginBottom: 20,
-  },
-  headerText: {
+  header: {
     fontSize: 18,
-    fontWeight: '600',
-    marginBottom: 8,
-    color: '#333',
-  },
-  subHeaderText: {
-    fontSize: 14,
-    color: '#555',
-    marginBottom: 20,
     textAlign: 'center',
-    paddingHorizontal: 20,
+    marginBottom: 40,
   },
-  listContainer: {
-    width: '100%',
-    paddingHorizontal: 16,
-  },
-  itemContainer: {
-    backgroundColor: '#fff',
+  card: {
+    backgroundColor: '#FFF',
+    padding: 15,
+    marginVertical: 8,
     borderRadius: 8,
-    padding: 12,
-    marginBottom: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
     elevation: 3,
-  },
-  infoContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
   },
   serves: {
-    fontSize: 14,
-    fontWeight: '600',
     color: '#555',
+    fontSize: 16,
   },
   time: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#d9534f',
-  },
-  caterer: {
+    color: 'red',
     fontSize: 16,
-    fontWeight: '700',
-    color: '#333',
-    marginTop: 8,
+    marginTop: 5,
   },
-  footerContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  name: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 5,
+  },
+  customerService: {
     marginTop: 20,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
+    alignItems: 'center',
+    padding: 15,
+    borderRadius: 12,
+    backgroundColor: '#FFF',
+    elevation: 5,
   },
-  phoneIcon: {
-    width: 20,
-    height: 20,
-    marginRight: 10,
-  },
-  footerText: {
-    fontSize: 16,
-    fontWeight: '700',
-    color: '#333',
+  customerServiceText: {
+    fontSize: 20,
+    color: '#000',
   },
 });
 
-export default PremiumPage;
+export default Premium;
