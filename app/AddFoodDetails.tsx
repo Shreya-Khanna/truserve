@@ -1,10 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, ScrollView } from "react-native";
 import { router } from "expo-router";
+import { LogBox } from 'react-native';
+LogBox.ignoreAllLogs();
 
 const FoodDetailsForm = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       {/* Back Button */}
       <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
         <Text style={styles.backButtonIcon}>←</Text>
@@ -33,7 +35,7 @@ const FoodDetailsForm = () => {
           <Text style={styles.buttonText}>Submit</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -41,7 +43,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#E9EED9",
-    padding: 20,
+    padding: 30,
+    paddingVertical: 20
   },
   backButton: {
     flexDirection: "row",
