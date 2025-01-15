@@ -42,10 +42,9 @@ To get a local copy up and running follow these simple example steps.
    ```
 ## Usage
 
-We made this app as a mediator between people with surplus food and people who require that surplus
+We made this app to create a mediator between organisations with surplus food and those that do not have consistent access to food and would appreciate the surplus.
 
-The bussiness model we had in mind was a premium subscription for delivering the food wherever it needs to go
-
+The business model we had in mind was a premium subscription, that offered delivery services, 24/7 customer support, and live notifications for food updates. We see the potential of the app being used by firms and MNCs as a way to fulfill Corporate Social Responsibility as well.
 
 ## Contributing
 
@@ -64,9 +63,9 @@ Distributed under the MIT License. See [MIT License](https://opensource.org/lice
 ## Contact
 
 
-Shreya - khanna.shreya19@gmail.com
 
 Ayushmaan - ayushmaan4096@gmail.com
+Shreya - khanna.shreya19@gmail.com
 
 Project Link: https://github.com/Shreya-Khanna/truserve
 
