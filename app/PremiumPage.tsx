@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import { router } from "expo-router";
 
-const Premium = ({ navigation }) => {
+const Premium = () => {
   const foodUpdates = [
     { id: '1', name: 'Johnson Caterers', serves: '15p', time: '2 min ago' },
     { id: '2', name: 'Cuisines Experts', serves: '12p', time: '17 min ago' },
@@ -14,10 +14,10 @@ const Premium = ({ navigation }) => {
     <TouchableOpacity
       style={styles.card}
       onPress={()=>{
-        router.push("/ReqFoodDetails")
+        router.push("/RequestedFoodDetails")
     }}>
       <Text style={styles.serves}>{`serves ${item.serves}`}</Text>
-      <Text style={styles.time}>{item.time}</Text>
+      <Text style={styles.time}>{item.timel}</Text>
       <Text style={styles.name}>{item.name}</Text>
     </TouchableOpacity>
   );

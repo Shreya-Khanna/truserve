@@ -1,4 +1,4 @@
-# Welcome to your Expo app 👋
+# TruServe 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -16,35 +16,59 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Built with 
+[React](https://reactjs.org)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Getting Started
 
-## Get a fresh project
+To get a local copy up and running follow these simple example steps.
+### Prerequisites
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+### Installation
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Shreya-Khanna/truserve
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+## Usage
 
-To learn more about developing your project with Expo, look at the following resources:
+We made this app as a mediator between people with surplus food and people who require that surplus
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+The bussiness model we had in mind was a premium subscription for delivering the food wherever it needs to go
 
-## Join the community
 
-Join our community of developers creating universal apps.
+## Contributing
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+## License
+
+Distributed under the MIT License. See [MIT License](https://opensource.org/licenses/MIT) for more information.
+## Contact
+
+
+Shreya - khanna.shreya19@gmail.com
+
+Ayushmaan - ayushmaan4096@gmail.com
+
+Project Link: https://github.com/Shreya-Khanna/truserve
+
+
+
